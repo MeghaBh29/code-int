@@ -21,7 +21,8 @@ app = FastAPI()
 # CORS: allows the endpoint to be called from browsers / testing tools
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],      # Accept requests from any origin
+    allow_origins=["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
